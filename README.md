@@ -3,11 +3,11 @@ FNV1A Hash Resolver. Created during a six-hour CTF.
 
 ## Acknowledgements
 
-I took the hashing algorithm from [jslicer](https://github.com/jslicer/FNV-1a/) since I needed a quick solution and hadn't used FNV1A. I only kept the 128-bit portion of the code since the CTF only required that size.
+I took the hashing algorithm from [jslicer](https://github.com/jslicer/FNV-1a/) since I needed a quick solution and hadn't used FNV1A before. I only kept the 128-bit portion of the code since the CTF only required that size.
 
 # Overview
 
-You **cannot** decrypt a hash. However, you **can** hash text and see if the resulting hash matches a hash. If you find a match, well... you know its cleartext value. It's not perfect and certainly not fast, but at a high level this is how attackers crack encoded strings. This process is also how websites authenticate users without storing a user's password in cleartext (though I'm way, way oversimplifying that process).
+You **cannot** decrypt a hash. However, you **can** hash text and see if the resulting hash matches an input. If you find a match, well... you know its cleartext value. It's not perfect and certainly not fast, but at a high level this is how attackers crack encoded strings. This process is also how websites authenticate users without storing a user's password in cleartext (though I'm way, way oversimplifying that process).
 
 This application specifically targets the FNV1A algorithm, using a 128 bit length. With most hashing algorithms I would rely on a program like [hashcat](https://hashcat.net/hashcat/) which is well-optimized for multiple platforms and hashing using a computer's graphics card (which are much better than CPUs at hashing). However, hashcat does not support this algorithm so during a time-contrained competition, I needed to build my own application quickly to process a collection of hashes to score points. The algorithm and bit length were already provided.
 
