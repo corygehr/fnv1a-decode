@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FNV1A": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\cogehr\\OneDrive - Microsoft\\Desktop\\forescient\\remaining.txt\" \"C:\\Users\\cogehr\\OneDrive - Microsoft\\Desktop\\forescient\\words6.txt\""
+    }
+  }
+}
