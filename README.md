@@ -3,7 +3,7 @@ FNV1A Hash Resolver. Created during a six-hour CTF.
 
 ## Acknowledgements
 
-I took the hashing algorithm from (jslicer)[https://github.com/jslicer/FNV-1a/] since I needed a quick solution and hadn't used FNV1A. I only kept the 128-bit portion of the code since the CTF only required that size.
+I took the hashing algorithm from [jslicer](https://github.com/jslicer/FNV-1a/) since I needed a quick solution and hadn't used FNV1A. I only kept the 128-bit portion of the code since the CTF only required that size.
 
 # Overview
 
@@ -39,3 +39,7 @@ The last parameter is optional. In the competition it was known that the rockyou
   * Removes another string from the match check which can slightly optimize performance.
 
 A first iteration of this program pre-computed the hashes of the wordlist and afterward searching for matches in the file. However, this can eat lots of memory if wordlists grow (e.g. all combinations of lowercase letters using 8-character strings grows to hundreds of gigabytes quickly - per crunch). Thus that model was abandoned after the input wordlist grew too quickly.
+
+### Why C# though?
+
+I work with it every day. If I need to do something quickly, I use C#. If I had a lot more time I would probably have tried to do this in another language to brush up on my skills.
